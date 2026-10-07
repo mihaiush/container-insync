@@ -1,4 +1,5 @@
 #!/bin/bash
 
 export QT_XCB_GL_INTEGRATION=none 
-insync start --no-daemon 2>&1 | grep -v CORS
+insync start --no-daemon 2>&1 | grep -v CORS &
+xterm
