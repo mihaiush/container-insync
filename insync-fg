@@ -3,7 +3,11 @@
 export QT_XCB_GL_INTEGRATION=none 
 insync start --no-daemon &
 PID=$!
-xterm &
+while ! [ -e "/tmp/insync1.sock" ] ; do
+    sleep 1
+done
+sleep 1
+insync show
 while kill -0 $PID ; do
     sleep 1
 done
