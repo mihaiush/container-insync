@@ -1,18 +1,14 @@
-#!/bin/bash
+#!/bin/bash 
 
 export QT_XCB_GL_INTEGRATION=none 
+[ -n "$DEBUG" ] && set -x
 
 case $INSYNC_CMD in
-    1)
-        echo "---> 1" >>/tmp/insync.log
-        INSYNC_CMD=2 $0 &
-        insync start --no-daemon >>/tmp/insync.log 2>&1
-        kill $(cat /tmp/insync.pid) 
+    start)
+        INSYNC_CMD=show $0 &
+        insync start --no-daemon 
     ;;
-    2)
-        echo "---> 2" >>/tmp/insync.log
-        set -x
-        insync version
+    show)
         while ! [ -e "/tmp/insync$(id -u).sock" ] ; do
             sleep 1
         done
@@ -20,11 +16,10 @@ case $INSYNC_CMD in
         insync show
     ;;
     *)
-        rm -f /tmp/insync.pid
-        >/tmp/insync.log
-        echo $$ >/tmp/insync.pid
-        INSYNC_CMD=1 xvfb-cmd $0 &
-        tail -f /tmp/insync.log
+        echo
+        echo "Starting Insync $(insync version)"
+        echo
+        INSYNC_CMD=start xvfb-cmd $0 
     ;;
 esac
 
