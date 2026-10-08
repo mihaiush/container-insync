@@ -5,17 +5,21 @@ export QT_XCB_GL_INTEGRATION=none
 case $INSYNC_CMD in
     1)
         echo "---> 1" >>/tmp/insync.log
-        xterm -hold -e "INSYNC_CMD=2 $0" &
-        xterm -e "insync start --no-daemon 2>&1 | tee -a /tmp/insync.log"
+        xterm -geometry 80x24+0+0 -hold -e "INSYNC_CMD=2 $0" &
+        xterm -geometry 80x24+512+0 -e "insync start --no-daemon 2>&1 | tee -a /tmp/insync.log"
         kill $(cat /tmp/insync.pid) 
     ;;
     2)
         echo "---> 2" >>/tmp/insync.log
+        set -x
+        insync version
         while ! [ -e "/tmp/insync1.sock" ] ; do
             sleep 1
         done
         sleep 1
+        insync hide
         insync show
+        exec bash
     ;;
     *)
         rm -f /tmp/insync.pid
