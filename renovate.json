@@ -14,5 +14,11 @@
       ],
       "versioningTemplate": "loose"
     }
-  ]
+  ],
+  "customDatasources": {
+    "html": {
+      "defaultRegistryUrlTemplate": "{{registryUrl}}",
+      "format": "html"
+    }
+  }
 }
