@@ -26,7 +26,7 @@ RUN \
         insync lsb-release bsdextrautils procps shared-mime-info \
         libasound2t64 libxcb-shape0
 
-ADD insync-fg /usr/local/bin/
+ADD insync-run /usr/local/bin/
 
 VOLUME /xvfb
-CMD xvfb-cmd insync-fg
+CMD insync-run
