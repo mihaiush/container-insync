@@ -9,7 +9,7 @@ case $INSYNC_CMD in
         insync start --no-daemon 
     ;;
     show)
-        while ! [ -e "/tmp/insync$(id -u).sock" ] ; do
+        while ! [ -S "/tmp/insync$(id -u).sock" ] ; do
             sleep 1
         done
         sleep 1

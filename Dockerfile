@@ -26,7 +26,8 @@ RUN \
     export DEBIAN_FRONTEND=noninteractive &&\
     apt-get -q -y update &&\
     apt-get -q -y install \
-        insync lsb-release bsdextrautils procps shared-mime-info \
+        insync \
+        lsb-release bsdextrautils procps shared-mime-info \
         libasound2t64 libxcb-shape0
 
 ADD insync-run /usr/local/bin/
