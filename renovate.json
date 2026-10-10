@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended"
   ],
+  "logLevel": "debug",
   "customManagers": [
     {
       "customType": "regex",
