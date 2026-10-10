@@ -10,13 +10,13 @@
         "/^Dockerfile$/"
       ],
       "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)(\\s+registryUrl=(?<registryUrl>\\S+))?\\n.+[A-Z_]+_VERSION=\"(?<currentValue>[^\"]+)\""
+        "#\\s*renovate:\\s*datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)(\\s+registryUrl=(?<registryUrl>\\S+))?\\nENV\\s+[A-Z_]+_VERSION=\"(?<currentValue>[^\"]+)\""
       ],
       "versioningTemplate": "loose"
     }
   ],
   "customDatasources": {
-    "http-version": {
+    "version": {
       "defaultRegistryUrlTemplate": "https://home.mihaiush.ro/cgi-bin/{{depName}}-version",
       "format": "text"
     }
