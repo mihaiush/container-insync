@@ -3,7 +3,6 @@
   "extends": [
     "config:recommended"
   ],
-  "logLevel": "debug",
   "customManagers": [
     {
       "customType": "regex",
@@ -19,7 +18,7 @@
   "customDatasources": {
     "version": {
       "defaultRegistryUrlTemplate": "https://home.mihaiush.ro/cgi-bin/{{depName}}-version",
-      "format": "text"
+      "format": "plain"
     }
   }
 }
