@@ -1,9 +1,9 @@
 # renovate: datasource=docker depName=mihaiush/xvfb registryUlr=https://ghcr.io
-ARG IMAGE_VERSION=21.1.24-1-9
+ARG IMAGE_VERSION="21.1.24-1-9"
 FROM ghcr.io/mihaiush/xvfb:${IMAGE_VERSION}
 
 # renovate: datasource=custom.http-version depName=insync
-ENV INSYNC_VERSION=3.9.11.60043
+ENV INSYNC_VERSION="3.9.11.60043"
 
 RUN \
     echo 'APT::Install-Recommends "false";' >>/etc/apt/apt.conf &&\
