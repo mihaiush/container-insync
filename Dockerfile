@@ -2,8 +2,8 @@
 ARG IMAGE_VERSION=21.1.24-1-9
 FROM ghcr.io/mihaiush/xvfb:${IMAGE_VERSION}
 
-# renovate: datasource=custom.html depName=dummy registryUrl=https://www.insynchq.com/downloads/linux
-ENV INSYNC_VERSION=0.0.0
+# renovate: datasource=custom.http-version depName=insync
+ENV INSYNC_VERSION=3.9.11.60043
 
 RUN \
     echo 'APT::Install-Recommends "false";' >>/etc/apt/apt.conf &&\

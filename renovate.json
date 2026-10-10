@@ -16,9 +16,9 @@
     }
   ],
   "customDatasources": {
-    "html": {
-      "defaultRegistryUrlTemplate": "{{registryUrl}}",
-      "format": "html"
+    "http-version": {
+      "defaultRegistryUrlTemplate": "https://home.mihaiush.ro/cgi-bin/{{depName}}-version",
+      "format": "text"
     }
   }
 }
