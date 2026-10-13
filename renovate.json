@@ -20,5 +20,12 @@
       "defaultRegistryUrlTemplate": "https://home.mihaiush.ro/cgi-bin/{{packageName}}-version",
       "format": "plain"
     }
-  }
+  },
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["*"],
+      "automerge": true
+    }
+  ]
 }
