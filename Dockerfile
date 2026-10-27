@@ -1,5 +1,3 @@
-# _renovate: datasource=docker depName=mihaiush/xvfb registryUrl=https://ghcr.io
-ARG IMAGE_VERSION="21.1.25-2-22"
 FROM ghcr.io/mihaiush/xvfb:21.1.25-2-22
 
 # renovate: datasource=custom.version depName=insync
