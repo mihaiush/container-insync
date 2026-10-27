@@ -1,4 +1,4 @@
-FROM ghcr.io/mihaiush/xvfb:21.1.25-2-22
+FROM ghcr.io/mihaiush/xvfb:21.1.25-2-26
 
 # renovate: datasource=custom.version depName=insync
 ENV INSYNC_VERSION="3.9.11.60043"
