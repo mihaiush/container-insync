@@ -1,6 +1,6 @@
 FROM ghcr.io/mihaiush/xvfb:21.1.25-2-28
 
-# renovate: datasource=custom.version depName=insync
+# renovate-regex: datasource=custom.version packageName=insync
 ENV INSYNC_VERSION="3.9.11.60043"
 
 RUN \
