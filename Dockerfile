@@ -1,4 +1,4 @@
-FROM ghcr.io/mihaiush/xvfb:21.1.25-2-28
+FROM ghcr.io/mihaiush/xvfb:21.1.25-2-31
 
 # renovate-regex: datasource=custom.version packageName=insync
 ENV INSYNC_VERSION="3.9.11.60043"
