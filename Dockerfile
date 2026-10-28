@@ -17,7 +17,7 @@ RUN \
 RUN \
     curl -L https://apt.insync.io/insynchq.gpg 2>/dev/null | gpg --dearmor >/etc/apt/trusted.gpg.d/insynchq.gpg
 
-# renovate-regex: datasource=custom.version packageName=insync
+# renovate-regex: datasource=custom.version packageName=insync,testing
 ENV INSYNC_VERSION="3.9.11.60043"
 RUN \
     . /etc/os-release &&\
