@@ -1,11 +1,5 @@
 {
   "extends": [
     "github>mihaiush/ci//renovate-regex.json5#main"
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["ghcr.io/mihaiush/xvfb"],
-      "versioning": "regex:(?<major>[0-9]+)([^0-9]+(?<minor>[0-9]+))?([^0-9]+(?<patch>[0-9]+))?([^0-9]+(?<build>[0-9]+))?([^0-9]+(?<revision>[0-9]+))?"
-    }
   ]
 }

@@ -1,7 +1,6 @@
-FROM ghcr.io/mihaiush/xvfb:21.1.25-2-31
-
-# renovate-regex: datasource=custom.version packageName=insync
-ENV INSYNC_VERSION="3.9.11.60043"
+# renovate-regex: datasource=docker packageName=ghcr.io/mihaiush/xvfb
+ARG IMAGE_VERSION="21.1.25-2-31"
+FROM ghcr.io/mihaiush/xvfb:${IMAGE_VERSION}
 
 RUN \
     echo 'APT::Install-Recommends "false";' >>/etc/apt/apt.conf &&\
@@ -18,6 +17,8 @@ RUN \
 RUN \
     curl -L https://apt.insync.io/insynchq.gpg 2>/dev/null | gpg --dearmor >/etc/apt/trusted.gpg.d/insynchq.gpg
 
+# renovate-regex: datasource=custom.version packageName=insync
+ENV INSYNC_VERSION="3.9.11.60043"
 RUN \
     . /etc/os-release &&\
     echo "deb [signed-by=/etc/apt/trusted.gpg.d/insynchq.gpg] http://apt.insync.io/${ID} ${VERSION_CODENAME} non-free contrib" >/etc/apt/sources.list.d/insync.list &&\
