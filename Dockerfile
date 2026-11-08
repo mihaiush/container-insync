@@ -1,5 +1,5 @@
 # renovate-vre: datasource=docker packageName=ghcr.io/mihaiush/xvfb
-ARG IMAGE_VERSION="21.1.25-2-33"
+ARG IMAGE_VERSION="21.1.25-2-34"
 FROM ghcr.io/mihaiush/xvfb:${IMAGE_VERSION}
 
 RUN \
